@@ -1,0 +1,113 @@
+:root {
+  --color--primary: #1677ff;
+  /*主體色 */
+  --color--white: #fff;
+  --color--black: #000;
+  --color--gray: #666;
+
+  font-size: 10px;
+  /*default font size is 16px */
+
+  /* rem 里面写的font size */
+}
+
+* {
+  /* 影响body全部，真实元素都受影响*/
+  margin: 0;
+  /* padding: 0; */
+  /* user-select: none;*/
+  /*不能選中*/
+  /*list-style: none;*/
+  /*list ol ul 前面的點點，數序不顯示*/
+  /*text-decoration: none;*/
+  /*button的下橫線不見了 */
+  /*-webkit-user-drag: none; */
+}
+
+.btn {
+  display: block;
+  /* div佔用行   div 算BLOCK, 可以撐起自己*/
+  display: inline;
+  /* span 緊接   SPAN算是inline; span撐不起來,軟的東西*/
+  /* 後面一個會覆蓋前面inline比較大 */
+  display: inline-block;
+  /* 里面接著，外面撐著 */
+  /* 這種情況，不再分大小，是兩者之間的和
+  margin-top: 3rem;
+  margin-bottom: 4rem; */
+
+
+
+
+  color: var(--color--primary);
+  font-size: 1.6rem;
+  /*在ROOT中有傳遞性
+  ROOT中是10PX, 1.6rem=16px*/
+  border: 1px solid black;
+  /* 這里字體和border 永遠是16:1.一直都一樣比列，要按自己實際設計 */
+  /* border: 0.1rem solid var(--color--primary); 這里border 不寫默認X色*/
+
+  /* border-top: 2px solid var(--color--primary);
+  border-bottom: 2px dashed;
+  border-left: 1px dashed red;
+  border-right: 2px solid var(--color--gra); */
+
+  border-radius: 5rem;
+  /* 寛跟行，高跟字體 。但圓形不一樣，要定義高和寛一樣*/
+
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+
+  /* 上距下3, 下距上4, 誰大取誰 */
+
+  padding: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  /* 可以寫為 */
+  padding: 1.5rem 10rem;
+  /* 前面代表上下，後面代表左右. */
+
+
+  /* 3個值的padding: 上 左右 下 */
+  /* 4個值的padding: 上 右 下 左 :順時針 */
+
+  cursor: pointer;
+  /* MOUSe變小手 */
+
+
+  box-shadow: 59px -62px 19px 0px rgba(221, 222, 117, 0.75),
+    -73px 107px 19px 0px rgba(117, 222, 222, 0.75);
+
+  transition: all 300ms ease-in-out;
+  /* (all 0是默認) */
+  /* 放到btn下，由BTN 到hover。都有效果 */
+  /* all 500ms 勻速 */
+}
+
+.btn:hover {
+  color: red;
+  background-color: green;
+}
+
+.btn:active {
+  color: green;
+  background-color: bisque;
+}
+
+
+/* p裝的是段落，是容器。  */
+.circle {
+  /* width: 8 rem;
+  height: 8rem; */
+  /* 舊的做法, 手工設定1:1 */
+
+  /* border: 0.1rem solid var(--color--gray); */
+  /* 有高的情況下，寛高比失效 */
+  /* 無高無寛，按默認寛 */
+
+  /* aspect-ratio: 1/1;  
+
+  border-radius: 50%;
+  /* 圓型 */
+}
